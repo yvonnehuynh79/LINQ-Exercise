@@ -1,10 +1,15 @@
-﻿namespace LINQ
+﻿
+
+
+
+
+List<string> foodMenu = new List<string>() { "Spaghetti", "Pizza", "Lasagna" };
+foodMenu.Add("Tiramisu");
+foodMenu.Add("IceCream");
+
+var orderMenu = foodMenu.OrderBy(name => name.Length);
+
+foreach (var menu in orderMenu)
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    Console.WriteLine(menu);
 }
